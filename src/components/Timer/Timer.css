@@ -1,0 +1,30 @@
+.countdown-timer {
+  position: absolute;
+  top: 80%; /* Смещаем таймер на 50% вниз от верха контейнера */
+  width: 100%; /* Ширина таймера соответствует ширине блока с изображением */
+  transform: translateY(20%);
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-size: 20px;
+  z-index: 2;
+}
+
+.countdown-segment {
+  margin: 10px;
+  position: relative;
+  text-align: center;
+  width: 95px;
+}
+
+.countdown-segment::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
+  border: 3px solid white;
+  border-radius: 50%;
+}

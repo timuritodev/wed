@@ -1,0 +1,23 @@
+.image-block {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Центрируем содержимое по горизонтали */
+}
+
+.image-block__pic {
+  width: 445px;
+  height: 615px;
+  display: block; /* Убираем пробелы под изображением */
+}
+
+.image-block::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Полупрозрачный черный фон */
+  z-index: 1; /* Убедитесь, что затемнение находится над изображением */
+}

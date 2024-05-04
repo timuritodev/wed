@@ -4,6 +4,8 @@ import "./MainPage.css";
 import Countdown from "react-countdown";
 import { useSearchParams } from "react-router-dom";
 import { Calendar } from "../../components/Calendar/Calendar";
+import { Timer } from "../../components/Timer/Timer";
+import { ImageBlock } from "../../components/ImageBlock/ImageBlock";
 
 export const MainPage: FC = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -16,7 +18,7 @@ export const MainPage: FC = () => {
     searchParams.get("p5"),
   ].filter(Boolean) as string[];
 
-  function generateGreeting(names: string[]): string {
+  const generateGreeting = (names: string[]) => {
     if (!names.length) {
       return "ДОРОГИЕ гости!";
     }
@@ -28,14 +30,14 @@ export const MainPage: FC = () => {
       return `ДОРОГОЙ ${last}!`;
     }
     return `ДОРОГИЕ ${names.join(", ")} и ${last}!`;
-  }
+  };
 
   const greeting = generateGreeting(names);
 
   return (
     <main className="main">
       <div className="main__container">
-        <Countdown date="2024-07-19" className="countdown-timer" />
+        <ImageBlock />
         <h3 className="main__title">{greeting}</h3>
         <p className="main__description">
           Один день в этом году станет для нас
@@ -46,7 +48,7 @@ export const MainPage: FC = () => {
           <br /> которая состоится:
         </p>
         <h4 className="main__date">19 июля 2024 года</h4>
-        <Calendar year={2024} month={6} highlightDay={23} />
+        <Calendar year={2024} month={6} highlightDay={19} />
         <p className="main__description">
           Пихта
           <br /> Заповедная зона
