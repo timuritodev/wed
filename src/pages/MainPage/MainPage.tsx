@@ -6,6 +6,8 @@ import { useSearchParams } from "react-router-dom";
 import { Calendar } from "../../components/Calendar/Calendar";
 import { Timer } from "../../components/Timer/Timer";
 import { ImageBlock } from "../../components/ImageBlock/ImageBlock";
+import { ProgrammList } from "../../components/Programm/ProgrammList";
+import { programm } from "../../utils/constants";
 
 export const MainPage: FC = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -38,15 +40,20 @@ export const MainPage: FC = () => {
     <main className="main">
       <div className="main__container">
         <ImageBlock />
-        <h3 className="main__title">{greeting}</h3>
+        <h1 className="main__title">{greeting}</h1>
         <p className="main__description">
+          Один день в этом году станет для нас особенно важным, и мы хотим
+          провести его в кругу близких и друзей! С большим удовольствием
+          приглашаем Вас на нашу свадебную вечеринку, которая состоится:
+        </p>
+        {/* <p className="main__description">
           Один день в этом году станет для нас
           <br /> особенно важным, и мы хотим провести
           <br /> его в кругу близких и друзей!
           <br /> С большим удовольствием приглашаем
           <br /> Вас на нашу свадебную вечеринку.
           <br /> которая состоится:
-        </p>
+        </p> */}
         <h4 className="main__date">19 июля 2024 года</h4>
         <Calendar year={2024} month={6} highlightDay={19} />
         <p className="main__description">
@@ -56,6 +63,8 @@ export const MainPage: FC = () => {
           по адресу: проспект Максима Горького, 2М
           <br /> г. Набережные Челны
         </p>
+        <h1 className="main__title">Программа дня</h1>
+        <ProgrammList data={programm} />
       </div>
     </main>
   );

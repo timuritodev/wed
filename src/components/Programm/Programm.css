@@ -1,0 +1,31 @@
+.programmlist {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin: 40px 0;
+}
+
+.programm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.programm__pic {
+  width: 144px;
+  height: 144px;
+}
+
+.programm__time {
+  margin: 15px 0;
+}
+
+.programm__text {
+  margin: 0;
+}
+@media screen and (max-width: 767px) {
+    .programmlist {
+        flex-direction: column;
+      }
+}

@@ -21,3 +21,10 @@
   background: rgba(0, 0, 0, 0.5); /* Полупрозрачный черный фон */
   z-index: 1; /* Убедитесь, что затемнение находится над изображением */
 }
+
+@media screen and (max-width: 767px) {
+  .image-block__pic {
+    width: 100%;
+    height: 615px;
+  }
+}
