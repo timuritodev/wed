@@ -7,7 +7,8 @@ import { Calendar } from "../../components/Calendar/Calendar";
 import { Timer } from "../../components/Timer/Timer";
 import { ImageBlock } from "../../components/ImageBlock/ImageBlock";
 import { ProgrammList } from "../../components/Programm/ProgrammList";
-import { programm } from "../../utils/constants";
+import { colors, programm } from "../../utils/constants";
+import { DressCode } from "../../components/DressCode/DressCode";
 
 export const MainPage: FC = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -65,6 +66,7 @@ export const MainPage: FC = () => {
         </p>
         <h1 className="main__title">Программа дня</h1>
         <ProgrammList data={programm} />
+        <DressCode colors={colors}/>
       </div>
     </main>
   );

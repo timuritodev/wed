@@ -36,3 +36,5 @@ export const programm = [
     time: "19:00",
   },
 ];
+
+export const colors = ['#e0a1a1', '#f4c2c2', '#aaaaaa', '#008080', '#0000ff'];

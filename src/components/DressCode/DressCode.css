@@ -1,0 +1,77 @@
+.dresscode {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background: url(../../images/flowers_4.jpeg);
+}
+
+.dresscode__container {
+  width: 679px;
+  height: 466px;
+  border: 1px solid #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 30px 0;
+}
+
+.dresscode__title {
+  text-align: center;
+  font-family: "Spectral";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 62px;
+  line-height: 64px;
+  color: #000000;
+  margin: 20px 0 0 0;
+}
+
+.dresscode__text {
+  text-align: center;
+  font-family: "Spectral";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 19px;
+  color: #000000;
+  margin: 20px 0;
+}
+.colors {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.color {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+@media screen and (max-width: 767px) {
+  .dresscode__container {
+    width: 320px;
+    height: 497px;
+  }
+
+  .dresscode__title {
+    font-size: 40px;
+    line-height: 38px;
+    color: #000000;
+  }
+
+  .dresscode__text {
+    font-size: 20px;
+    line-height: 16px;
+  }
+  .colors {
+    gap: 15px;
+    margin: 0 9px;
+  }
+
+  .color {
+    width: 64px;
+    height: 64px;
+  }
+}
