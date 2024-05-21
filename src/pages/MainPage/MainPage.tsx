@@ -9,6 +9,7 @@ import { ImageBlock } from "../../components/ImageBlock/ImageBlock";
 import { ProgrammList } from "../../components/Programm/ProgrammList";
 import { colors, programm } from "../../utils/constants";
 import { DressCode } from "../../components/DressCode/DressCode";
+import { FormBlock } from "../../components/FormBlock/FormBlock";
 
 export const MainPage: FC = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -47,14 +48,6 @@ export const MainPage: FC = () => {
           провести его в кругу близких и друзей! С большим удовольствием
           приглашаем Вас на нашу свадебную вечеринку, которая состоится:
         </p>
-        {/* <p className="main__description">
-          Один день в этом году станет для нас
-          <br /> особенно важным, и мы хотим провести
-          <br /> его в кругу близких и друзей!
-          <br /> С большим удовольствием приглашаем
-          <br /> Вас на нашу свадебную вечеринку.
-          <br /> которая состоится:
-        </p> */}
         <h4 className="main__date">19 июля 2024 года</h4>
         <Calendar year={2024} month={6} highlightDay={19} />
         <p className="main__description">
@@ -67,6 +60,8 @@ export const MainPage: FC = () => {
         <h1 className="main__title">Программа дня</h1>
         <ProgrammList data={programm} />
         <DressCode colors={colors}/>
+        <h1 className="main__title">Анкета гостя</h1>
+        <FormBlock names={names}/>
       </div>
     </main>
   );
