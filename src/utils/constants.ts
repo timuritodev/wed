@@ -4,7 +4,7 @@ import pic3 from "../images/programm_photo.png";
 import pic4 from "../images/programm_food.png";
 import pic5 from "../images/programm_end.png";
 
-export const API_BASE_URL = "http://localhost:3001/api";
+export const API_BASE_URL = "https://timur-eva.ru/api";
 
 export const programm = [
   {
