@@ -8,7 +8,18 @@
 .image-block__pic {
   width: 445px;
   height: 615px;
-  display: block; /* Убираем пробелы под изображением */
+  display: block;
+  object-fit: cover;
+}
+
+.image-block__logo {
+  width: 90%;
+  height: 140px;
+  display: block;
+  object-fit: cover;
+  z-index: 2;
+  position: absolute;
+  top: 55%;
 }
 
 .image-block::after {
@@ -18,13 +29,18 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.5); /* Полупрозрачный черный фон */
-  z-index: 1; /* Убедитесь, что затемнение находится над изображением */
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
 }
 
 @media screen and (max-width: 767px) {
   .image-block__pic {
     width: 100%;
     height: 615px;
+  }
+
+  .image-block__logo {
+    height: 140px;
+    top: 60%;
   }
 }

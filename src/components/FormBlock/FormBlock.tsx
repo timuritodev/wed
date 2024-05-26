@@ -1,6 +1,9 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { ChangeEvent, FC, FormEvent, useState } from "react";
 import "./FormBlock.css";
 import { PopupForm } from "../Popups/PopupWholesale";
+import { fetchSendEmail } from "../../api/mailer";
+import { IMailer } from "../../types/Mailer.types";
 
 interface FormBlockProps {
   names: string[];
@@ -8,8 +11,8 @@ interface FormBlockProps {
 
 export const FormBlock: FC<FormBlockProps> = ({ names }) => {
   const [isPopupOpened, setIsPopupOpened] = useState<boolean>(false);
-  const [formData, setFormData] = useState({
-    name: names,
+  const [formData, setFormData] = useState<IMailer>({
+    names: names,
     attending: "",
   });
 
@@ -20,8 +23,14 @@ export const FormBlock: FC<FormBlockProps> = ({ names }) => {
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
-    setIsPopupOpened(true);
-    console.log({ ...formData });
+    fetchSendEmail(formData)
+      .then((response: any) => {
+        console.log('Email sent successfully:', response);
+        setIsPopupOpened(true);
+      })
+      .catch((error: any) => {
+        console.error('Error sending email:', error);
+      });
   };
 
   return (

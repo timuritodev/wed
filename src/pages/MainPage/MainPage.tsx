@@ -10,6 +10,7 @@ import { ProgrammList } from "../../components/Programm/ProgrammList";
 import { colors, programm } from "../../utils/constants";
 import { DressCode } from "../../components/DressCode/DressCode";
 import { FormBlock } from "../../components/FormBlock/FormBlock";
+import { LastImageBlock } from "../../components/LastImageBlock/LastImageBlock";
 
 export const MainPage: FC = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -62,6 +63,7 @@ export const MainPage: FC = () => {
         <DressCode colors={colors}/>
         <h1 className="main__title">Анкета гостя</h1>
         <FormBlock names={names}/>
+        <LastImageBlock />
       </div>
     </main>
   );
