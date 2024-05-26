@@ -1,7 +1,7 @@
 import { FC } from "react";
 import "./ImageBlock.css";
 // import pic from '../../images/pic.jpeg';
-import pic from '../../images/main_pic5.jpg';
+import pic from '../../images/main_pic5_1.jpg';
 import logo from '../../images/te2.png';
 import { Timer } from "../Timer/Timer";
 

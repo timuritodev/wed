@@ -1,4 +1,4 @@
 export interface IMailer {
-  names: string[];
-  attending: string;
+  email: string;
+  text: string;
 }
