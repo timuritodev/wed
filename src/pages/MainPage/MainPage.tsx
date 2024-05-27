@@ -11,6 +11,7 @@ import { colors, programm } from "../../utils/constants";
 import { DressCode } from "../../components/DressCode/DressCode";
 import { FormBlock } from "../../components/FormBlock/FormBlock";
 import { LastImageBlock } from "../../components/LastImageBlock/LastImageBlock";
+import { MapBlock } from "../../components/MapBlock/MapBlock";
 
 export const MainPage: FC = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -58,6 +59,7 @@ export const MainPage: FC = () => {
           по адресу: проспект Максима Горького, 2М
           <br /> г. Набережные Челны
         </p>
+        <MapBlock />
         <h1 className="main__title">Программа дня</h1>
         <ProgrammList data={programm} />
         <DressCode colors={colors}/>
