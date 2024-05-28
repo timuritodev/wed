@@ -11,32 +11,34 @@ export const programm = [
     id: 1,
     pic: pic1,
     text: "Сбор гостей, фуршет",
-    time: "19:00",
+    time: "16:00",
   },
   {
     id: 2,
     pic: pic2,
     text: "Выездная регистрация",
-    time: "19:00",
+    time: "17:00",
   },
   {
     id: 3,
     pic: pic3,
     text: "Фотосессия",
-    time: "19:00",
+    time: "17:20",
   },
   {
     id: 4,
     pic: pic4,
     text: "Банкет",
-    time: "19:00",
+    time: "18:00",
   },
   {
     id: 5,
     pic: pic5,
     text: "Окончание банкета",
-    time: "19:00",
+    time: "23:30",
   },
 ];
 
-export const colors = ['#e0a1a1', '#f4c2c2', '#aaaaaa', '#008080', '#0000ff'];
+export const colors = ['#F08080', '#FFB6C1', '#FFFACD', '#DDA0DD', '#87CEFA','#90EE90'];
+
+// export const colors = ['#e0a1a1', '#f4c2c2', '#aaaaaa', '#008080', '#0000ff'];

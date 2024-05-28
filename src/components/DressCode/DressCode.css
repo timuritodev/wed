@@ -51,7 +51,7 @@
 
 @media screen and (max-width: 767px) {
   .dresscode__container {
-    width: 320px;
+    width: 315px;
     height: 497px;
   }
 
@@ -67,7 +67,7 @@
   }
   .colors {
     gap: 15px;
-    margin: 0 9px;
+    margin: 0 5px;
   }
 
   .color {

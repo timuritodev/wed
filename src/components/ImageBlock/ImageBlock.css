@@ -17,9 +17,9 @@
   height: 140px;
   display: block;
   object-fit: cover;
-  z-index: 2;
-  position: absolute;
-  top: 55%;
+  /* z-index: 2; */
+  /* position: absolute; */
+  /* top: 55%; */
 }
 
 .image-block::after {
@@ -33,6 +33,16 @@
   z-index: 1;
 }
 
+.image-block__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  z-index: 2;
+  position: absolute;
+  bottom: 10%;
+}
+
 @media screen and (max-width: 767px) {
   .image-block__pic {
     width: 100%;
@@ -41,6 +51,6 @@
 
   .image-block__logo {
     height: 140px;
-    top: 60%;
+    /* top: 60%; */
   }
 }
