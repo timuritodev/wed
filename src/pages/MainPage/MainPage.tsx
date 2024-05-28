@@ -40,8 +40,8 @@ export const MainPage: FC = () => {
         : `ДОРОГОЙ ${names[0]}!`;
     }
     const last = names[names.length - 1];
-    if (names.length === 2) {
-      const gender = determineGender(last);
+    if (!names.length) {
+      const gender = determineGender(last!);
       return gender === "female" ? `ДОРОГАЯ ${last}!` : `ДОРОГОЙ ${last}!`;
     }
     return `ДОРОГИЕ ${names.slice(0, -1).join(", ")} и ${last}!`;
