@@ -24,16 +24,25 @@ export const MainPage: FC = () => {
     searchParams.get("p5"),
   ].filter(Boolean) as string[];
 
+  const determineGender = (name: string) => {
+    const lastChar = name.slice(-1).toLowerCase();
+    return lastChar === "а" || lastChar === "я" ? "female" : "male";
+  };
+
   const generateGreeting = (names: string[]) => {
     if (!names.length) {
       return "ДОРОГИЕ гости!";
     }
     if (names.length === 1) {
-      return `ДОРОГОЙ ${names[0]}!`;
+      const gender = determineGender(names[0]);
+      return gender === "female"
+        ? `ДОРОГАЯ ${names[0]}!`
+        : `ДОРОГОЙ ${names[0]}!`;
     }
     const last = names.pop();
     if (!names.length) {
-      return `ДОРОГОЙ ${last}!`;
+      const gender = determineGender(last!);
+      return gender === "female" ? `ДОРОГАЯ ${last}!` : `ДОРОГОЙ ${last}!`;
     }
     return `ДОРОГИЕ ${names.join(", ")} и ${last}!`;
   };
@@ -62,9 +71,9 @@ export const MainPage: FC = () => {
         <MapBlock />
         <h1 className="main__title">Программа дня</h1>
         <ProgrammList data={programm} />
-        <DressCode colors={colors}/>
+        <DressCode colors={colors} />
         <h1 className="main__title">Анкета гостя</h1>
-        <FormBlock names={names}/>
+        <FormBlock names={names} />
         <LastImageBlock />
       </div>
     </main>
