@@ -21,17 +21,17 @@ export const MapBlock: FC = () => {
       if (mapInstance.current) return;
 
       mapInstance.current = new window.ymaps.Map(mapContainer.current, {
-        center: [55.850803, 52.460166],
+        center: [55.852076, 52.459151],
         zoom: 10,
       });
 
       mapInstance.current.behaviors.disable('scrollZoom');
       
       const placemark = new window.ymaps.Placemark(
-        [55.850803, 52.460166],
+        [55.852076, 52.459151],
         {
           hintContent: "Место проведения мероприятия",
-          balloonContent: "проспект Максима Горького, 2М, г. Набережные Челны",
+          balloonContent: "Травянка, 4, г. Набережные Челны",
         },
         {
           preset: "islands#icon",
