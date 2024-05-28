@@ -39,12 +39,12 @@ export const MainPage: FC = () => {
         ? `ДОРОГАЯ ${names[0]}!`
         : `ДОРОГОЙ ${names[0]}!`;
     }
-    const last = names.pop();
-    if (!names.length) {
-      const gender = determineGender(last!);
+    const last = names[names.length - 1];
+    if (names.length === 2) {
+      const gender = determineGender(last);
       return gender === "female" ? `ДОРОГАЯ ${last}!` : `ДОРОГОЙ ${last}!`;
     }
-    return `ДОРОГИЕ ${names.join(", ")} и ${last}!`;
+    return `ДОРОГИЕ ${names.slice(0, -1).join(", ")} и ${last}!`;
   };
 
   const greeting = generateGreeting(names);
