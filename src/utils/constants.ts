@@ -41,10 +41,12 @@ export const programm = [
 
 export const colors = [
   "#FFFACD",
+  '#D2B48C',
   "#FFB6C1",
   "#DDA0DD",
   "#87CEFA",
   "#8FBC8F",
+  '#808080',
 ];
 
 // export const colors = ['#e0a1a1', '#f4c2c2', '#aaaaaa', '#008080', '#0000ff'];
